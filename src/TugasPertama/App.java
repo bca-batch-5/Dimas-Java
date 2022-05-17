@@ -1,5 +1,4 @@
-import UserData.UserData;
-
+package TugasPertama;
 public class App {
     public static void main(String[] args) throws Exception {
 
@@ -16,4 +15,3 @@ public class App {
     userData.fungsiBilangan();
     }
 }
-

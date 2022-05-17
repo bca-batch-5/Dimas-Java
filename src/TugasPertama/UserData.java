@@ -1,4 +1,4 @@
-package UserData;
+package TugasPertama;
 
 public class UserData {
     private String firstName;
@@ -42,13 +42,14 @@ public class UserData {
     
     public void fungsiBilangan() {
         int x = 100;
-        int hasil = 0;
-        for (int i = 0; i <= x; i++) {
+        int jumlah = 0;
+        for (int i = 1; i <= x; i++) {
             if (i%3 == 0 && i%5 == 0) {
-                hasil += i;
-                System.out.println(i + " jumlah " + hasil);
+                jumlah += 1;
+                System.out.println(i);
             }
         }
+        System.out.println("Total "+jumlah);
     
     }
 }
