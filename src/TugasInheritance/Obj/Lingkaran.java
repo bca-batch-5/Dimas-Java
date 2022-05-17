@@ -1,6 +1,8 @@
 package TugasInheritance.Obj;
 
-public class Lingkaran {
+import TugasInheritance.Services.BangunDatar;
+
+public class Lingkaran implements BangunDatar {
     private double jariJari;
     private final double phi = 3.14;
 
@@ -35,5 +37,17 @@ public class Lingkaran {
         } else {
             return phi * jariJari * jariJari;
         }
+    }
+
+    @Override
+    public void menggambar() {
+        System.out.println("Gambar Lingkaran");
+        
+    }
+
+    @Override
+    public void karakteristik() {
+        System.out.println("karakter lingkaran");
+        
     }
 }

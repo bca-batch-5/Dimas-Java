@@ -1,6 +1,8 @@
 package TugasInheritance.Obj;
 
-public class PersegiPanjang {
+import TugasInheritance.Services.BangunDatar;
+
+public class PersegiPanjang implements BangunDatar {
     private int panjang;
     private int lebar;
 
@@ -25,11 +27,23 @@ public class PersegiPanjang {
         this.lebar = lebar;
     }
 
-    public int getKeliling() {
+    public double getKeliling() {
         return 2 * (panjang + lebar);
     }
 
-    public int getLuas() {
+    public double getLuas() {
         return panjang * lebar;
+    }
+
+    @Override
+    public void menggambar() {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void karakteristik() {
+        // TODO Auto-generated method stub
+        
     }
 }
