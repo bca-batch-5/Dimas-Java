@@ -2,7 +2,7 @@ package TugasInheritance.Obj;
 
 import TugasInheritance.Services.BangunDatar;
 
-public class Persegi implements BangunDatar{
+public class Persegi implements BangunDatar {
     private int sisi;
 
     public Persegi(int sisi) {
@@ -27,12 +27,17 @@ public class Persegi implements BangunDatar{
 
     @Override
     public void menggambar() {
-        System.out.println("Gambar Persegi");
+        for (int i = 1; i <= sisi; i++) {
+            for (int j = 1; j <= sisi; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
     }
 
     @Override
     public void karakteristik() {
         System.out.println("Karakteristik Persegi");
-        
+
     }
 }

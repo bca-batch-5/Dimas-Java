@@ -37,13 +37,18 @@ public class PersegiPanjang implements BangunDatar {
 
     @Override
     public void menggambar() {
-        // TODO Auto-generated method stub
-        
+        for (int i = 1; i <= lebar; i++) {
+            for (int j = 1; j <= panjang; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+
     }
 
     @Override
     public void karakteristik() {
-        // TODO Auto-generated method stub
-        
+        System.out.println("karakter Persegi Panjang");
+
     }
 }

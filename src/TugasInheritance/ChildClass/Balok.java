@@ -3,7 +3,7 @@ package TugasInheritance.ChildClass;
 import TugasInheritance.Obj.PersegiPanjang;
 import TugasInheritance.Services.BangunRuang;
 
-public class Balok extends PersegiPanjang implements BangunRuang{
+public class Balok extends PersegiPanjang implements BangunRuang {
     private int tinggi;
 
     public Balok(int panjang, int lebar, int tinggi) {
@@ -11,6 +11,7 @@ public class Balok extends PersegiPanjang implements BangunRuang{
         this.tinggi = tinggi;
 
     }
+
     @Override
     public double getVolume() {
         return super.getPanjang() * super.getLebar() * tinggi;
@@ -18,29 +19,25 @@ public class Balok extends PersegiPanjang implements BangunRuang{
 
     @Override
     public void karakteristik() {
-        // TODO Auto-generated method stub
-        
+        System.out.println("Karakter Balok");
+
     }
 
     @Override
     public void menggambar() {
-        // TODO Auto-generated method stub
-        
+        System.out.println("Menggambar Balok");
+
     }
 
     @Override
     public double getKeliling() {
-        // TODO Auto-generated method stub
-        return super.getKeliling();
+        return 4 * (super.getPanjang() + super.getLebar() + tinggi);
     }
 
     @Override
     public double getLuas() {
-        // TODO Auto-generated method stub
-        return super.getLuas();
+        return 2 * ((super.getPanjang() * super.getLebar()) + (super.getPanjang() * tinggi)
+                + (super.getLebar() * tinggi));
     }
 
-
-
-    
 }

@@ -52,6 +52,8 @@ public class App {
                             sisi = input.nextInt();
                             input.nextLine();
                             Persegi persegiKel = new Persegi(sisi);
+                            persegiKel.menggambar();
+                            persegiKel.karakteristik();
                             System.out.print("Keliling Persegi: ");
                             System.out.println(persegiKel.getKeliling());
                             break;
@@ -61,6 +63,8 @@ public class App {
                             sisi = input.nextInt();
                             input.nextLine();
                             Persegi persegiLuas = new Persegi(sisi);
+                            persegiLuas.menggambar();
+                            persegiLuas.karakteristik();
                             System.out.print("Luas Persegi: ");
                             System.out.println(persegiLuas.getLuas());
                             break;
@@ -80,6 +84,8 @@ public class App {
                             System.out.print("Lebar: ");
                             lebar = input.nextInt();
                             PersegiPanjang persegiPanjangKel = new PersegiPanjang(panjang, lebar);
+                            persegiPanjangKel.menggambar();
+                            persegiPanjangKel.karakteristik();
                             System.out.print("Keliling Persegi Panjang: ");
                             System.out.println(persegiPanjangKel.getKeliling());
                             input.nextLine();
@@ -92,6 +98,8 @@ public class App {
                             System.out.print("Lebar: ");
                             lebar = input.nextInt();
                             PersegiPanjang persegiPanjangLuas = new PersegiPanjang(panjang, lebar);
+                            persegiPanjangLuas.menggambar();
+                            persegiPanjangLuas.karakteristik();
                             System.out.print("Luas Persegi Panjang: ");
                             System.out.println(persegiPanjangLuas.getLuas());
                             input.nextLine();
@@ -111,6 +119,8 @@ public class App {
                             System.out.print("Jari-jari : ");
                             jariJari = input.nextInt();
                             Lingkaran lingkaranKel = new Lingkaran(jariJari);
+                            lingkaranKel.menggambar();
+                            lingkaranKel.karakteristik();
                             System.out.print("Keliling Lingkaran: ");
                             System.out.println(lingkaranKel.getKeliling());
                             input.nextLine();
@@ -121,6 +131,8 @@ public class App {
                             System.out.print("Jari-jari : ");
                             jariJari = input.nextInt();
                             Lingkaran lingkaranLuas = new Lingkaran(jariJari);
+                            lingkaranLuas.menggambar();
+                            lingkaranLuas.karakteristik();
                             System.out.print("Luas Lingkaran: ");
                             System.out.println(lingkaranLuas.getLuas());
                             input.nextLine();
@@ -136,6 +148,12 @@ public class App {
                     System.out.print("Sisi : ");
                     sisi = input.nextInt();
                     Kubus kubus = new Kubus(sisi);
+                    kubus.menggambar();
+                    kubus.karakteristik();
+                    System.out.print("Keliling Kubus: ");
+                    System.out.println(kubus.getKeliling());
+                    System.out.print("Luas Kubus:");
+                    System.out.println(kubus.getLuas());
                     System.out.print("Volume Kubus: ");
                     System.out.println(kubus.getVolume());
                     input.nextLine();
@@ -149,6 +167,12 @@ public class App {
                     System.out.print("Tinggi : ");
                     tinggi = input.nextInt();
                     Balok balok = new Balok(panjang, lebar, tinggi);
+                    balok.menggambar();
+                    balok.karakteristik();
+                    System.out.print("Keliling Balok : ");
+                    System.out.println(balok.getKeliling());
+                    System.out.print("Luas Balok");
+                    System.out.println(balok.getLuas());
                     System.out.print("Volume Balok : ");
                     System.out.println(balok.getVolume());
                     input.nextLine();
@@ -158,6 +182,12 @@ public class App {
                     System.out.print("Jari-Jari : ");
                     jariJari = input.nextInt();
                     Bola bola = new Bola(jariJari);
+                    bola.menggambar();
+                    bola.karakteristik();
+                    System.out.print("Keliling Bola :");
+                    System.out.println(bola.getKeliling());
+                    System.out.print("Luas Bola : ");
+                    System.out.println(bola.getLuas());
                     System.out.print("Volume Bola: ");
                     System.out.println(bola.getVolume());
                     input.nextLine();

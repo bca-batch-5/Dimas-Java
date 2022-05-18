@@ -42,12 +42,12 @@ public class Lingkaran implements BangunDatar {
     @Override
     public void menggambar() {
         System.out.println("Gambar Lingkaran");
-        
+
     }
 
     @Override
     public void karakteristik() {
         System.out.println("karakter lingkaran");
-        
+
     }
 }

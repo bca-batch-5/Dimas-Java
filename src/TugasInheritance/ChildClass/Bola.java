@@ -19,25 +19,21 @@ public class Bola extends Lingkaran implements BangunRuang {
 
     @Override
     public double getKeliling() {
-        // TODO Auto-generated method stub
-        return super.getKeliling();
+        return 4 * super.getPhi() * Math.pow(super.getJariJari(), 3) / 3;
     }
 
     @Override
     public double getLuas() {
-        // TODO Auto-generated method stub
-        return super.getLuas();
+        return 4 * super.getPhi() * Math.pow(super.getJariJari(), 2);
     }
 
     @Override
     public void karakteristik() {
-        // TODO Auto-generated method stub
-        super.karakteristik();
+        System.out.println("karakteristik Bola");
     }
 
     @Override
     public void menggambar() {
-        // TODO Auto-generated method stub
-        super.menggambar();
+        System.out.println("menggambar Bola");
     }
 }

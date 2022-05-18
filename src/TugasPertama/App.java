@@ -10,8 +10,14 @@ public class App {
     System.out.println("lahir di "+ userData.getBirthPlace());
     System.out.println("tahun " + userData.getBirthYear());
     System.out.println("bahasa favorit saya adalah " + userData.getProgrLangFav());
-    
-
     userData.fungsiBilangan();
+
+
+    for(int i=0;i<=3;i++){
+        for(int j=0;j<=5;j++){
+        System.out.print("*");
+        }
+        System.out.println("");
+        }
     }
 }
