@@ -5,6 +5,8 @@ public class Person extends Student {
     private String lastName;
     private String address;
 
+
+    
     public Person(String firstName, String lastName, String address, String matKul, int sks) {
         super(matKul, sks);
         this.firstName = firstName;
@@ -44,9 +46,5 @@ public class Person extends Student {
         }
     }
 
-    @Override
-    public String toString() {
-        return getFullName();
-    }
 
 }

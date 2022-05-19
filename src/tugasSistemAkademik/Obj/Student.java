@@ -5,11 +5,13 @@ public class Student{
 
     private String matKul;
     private int sks;
+    
 
     public Student(String matKul, int sks) {
         this.matKul = matKul;
         this.sks = sks;
     }
+    
     public String getMatKul() {
         return matKul;
     }
