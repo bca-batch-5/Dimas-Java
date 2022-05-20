@@ -1,6 +1,7 @@
 package tugasKasir;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,10 +25,11 @@ public class Main {
     private static int LemonTotal;
     private static int pembayaran;
     private static List<Integer> order = new ArrayList<>();
+    private static Date date = new Date() ;
 
     public static void menuAwal() {
         System.out.println("1. Makanan");
-        System.out.println("2.Minuman");
+        System.out.println("2. Minuman");
     }
 
     public static void menuMakanan() {
@@ -119,15 +121,18 @@ public class Main {
                 System.out.println("Kembalian : " + kasir.getKembalian(pembayaran));
             }
         } while (pembayaran < (kasir.getTotalBayar() + kasir.getPPN()));
-        System.out.println();
         System.out.println("---------------Receipt------------------");
+        System.out.println();
+        System.out.println( date.toString());
+        System.out.println();
         System.out.println("Ayam Geprek = " + order.get(0));
         System.out.println("Ayam Bakar = " + order.get(1));
         System.out.println("Es Teh = " + order.get(2));
         System.out.println("Lemon = " + order.get(3));
         System.out.println("Total Pembayaran + PPN :" + (kasir.getTotalBayar() + kasir.getPPN()));
+        System.out.println("Uang yang dibayarkan : "+ pembayaran);
+        System.out.println("Kembalian : " + kasir.getKembalian(pembayaran));
         System.out.println("---------------------------------------------");
-
         input.close();
     }
 

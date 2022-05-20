@@ -19,6 +19,7 @@ public class Main {
     private static int jumlahSKS = 0;
     static List<String> persons = new ArrayList<>();
     static List<List<String>> listPersons = new ArrayList<>();
+    static Person person;
 
     public static void menu() {
         System.out.println("---------Program Sistem Akademik------------");
@@ -36,7 +37,7 @@ public class Main {
         lastName = scan.nextLine();
         System.out.print("Address: ");
         address = scan.nextLine();
-        Person person = new Person(firstName, lastName, address, matKul, jumlahSKS);
+        person = new Person(firstName, lastName, address, matKul, jumlahSKS);
         persons.add(person.getFullName());
         persons.add(person.getAddress());
         listPersons.add(persons);
@@ -57,11 +58,14 @@ public class Main {
             sks = scan.nextInt();
             scan.nextLine();
             jumlahSKS = jumlahSKS + sks;
+            person.setSks(jumlahSKS);
             System.out.print("Apakah anda ingin menambahkan matkul kembali? Y/N : ");
             option = scan.nextLine();
         } while (option.equalsIgnoreCase("y"));
+        // mengupdate sks dan fullname yang berparameten sks
         listPersons.get(pilihan).add(Integer.toString(jumlahSKS));
-        System.out.println(jumlahSKS);
+        listPersons.get(pilihan).set(0, person.getFullName());
+        System.out.println("Total SKS : " + " " + jumlahSKS);
         jumlahSKS = 0;
         System.out.println("Mata Kuliah dan SKS telah ditambahkan!");
         System.out.println("------------------------------------------");
@@ -93,22 +97,22 @@ public class Main {
                     pilihan = scan.nextInt();
                     scan.nextLine();
                     listPersons.get(pilihan);
-                    if(Integer.parseInt(listPersons.get(pilihan).get(2)) >= 144){
-                        System.out.println(listPersons.get(pilihan).get(0) +" "+ "S.Kom");
-                        } else {
+                    if (Integer.parseInt(listPersons.get(pilihan).get(2)) >= 144) {
+                        System.out.println(listPersons.get(pilihan).get(0) + " " + "S.Kom");
+                    } else {
                         System.out.println(listPersons.get(pilihan).get(0));
-                        }
-                        System.out.println("Total SKS : " + listPersons.get(pilihan).get(2));
+                    }
+                    System.out.println("Total SKS : " + listPersons.get(pilihan).get(2));
                     if (Integer.parseInt(listPersons.get(pilihan).get(2)) >= 144) {
                         System.out.println("Status : Lulus");
-                    }else{
+                    } else {
                         System.out.println("Status : Belum Lulus");
                     }
                     break;
                 default:
                     System.out.println("Menu tidak ditemukan!");
                     break;
-                }
+            }
             System.out.print("Apakah anda ingin mengakses program kembali? Y/N : ");
             option = scan.nextLine();
         } while (option.equalsIgnoreCase("y"));

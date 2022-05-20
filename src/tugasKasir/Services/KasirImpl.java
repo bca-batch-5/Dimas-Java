@@ -23,7 +23,7 @@ public class KasirImpl extends Menu implements Kasir {
 
     @Override
     public double getKembalian(int pembayaran) {
-        return pembayaran - getTotalBayar() + getPPN();
+        return pembayaran - (getTotalBayar() + getPPN());
     }
 
 }
